@@ -1,0 +1,173 @@
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>MAIR++</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="./index_files/icon.ico">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./index_files/codemirror.min.css">
+    <link rel="stylesheet" href="./index_files/app.css">
+    <link rel="stylesheet" href="./index_files/bootstrap.min(1).css">
+
+    <script type="text/javascript" async="" src="./index_files/analytics.js"></script>
+    <script type="text/javascript" async="" src="./index_files/analytics(1).js"></script>
+    <script async="" src="./index_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/bootstrap.min.js"></script>
+    <script src="./index_files/codemirror.min.js"></script>
+    <script src="./index_files/clipboard.min.js"></script>
+
+    <script src="./index_files/app.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                <b>MAIR++:</b> Improving Multi-view Attention Inverse Rendering with Implicit Lighting Representation
+            <br /><br />
+            <small>
+                TPAMI 2025
+            </small>
+            <br /><br />
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://bring728.github.io/junyong-website/">
+                          JunYong Choi
+                        </a><sup>1,2</sup>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/seokyeong-lee-852a96191/?originalSubdomain=kr">
+                        SeokYeong Lee
+                        </a><sup>1,2</sup>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/haesol-park-06a7b216b/?originalSubdomain=kr">
+                        Haesol Park
+                        </a><sup>1</sup>
+                    </li>
+                     <li>
+                        <a href="https://sites.google.com/view/deepiplab/">
+                          Seung-Won Jung
+                        </a><sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/view/ijkim/%ED%99%88">
+                          Ig-Jae Kim
+                        </a><sup>1,3,4</sup>
+                    </li>
+                    <li>
+                        <a href="http://jhcho.info">
+                        Junghyun Cho
+                        </a><sup>1,3,4</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>1</sup>Korea Institute of Science and Technology(KIST) 
+                    </li>
+                    <li>
+                        <sup>2</sup>Korea University
+                    </li>
+                    <br>
+                    <li>
+                        <sup>3</sup>AI-Robotics, KIST School, University of Science and Technology
+                    </li>
+                    <br>
+                    <li>
+                        <sup>4</sup>Yonsei-KIST Convergence Research Institute, Yonsei University
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2408.06707">
+                            <img src="./index_files/mair_paper_icon.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/bring728/MAIR_Open">
+                            <img src="./index_files/github-logo.png" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./index_files/teaser.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    In this paper, we propose a scene-level inverse rendering framework that uses multi-view images to decompose the scene into geometry, SVBRDF, and 3D spatially-varying lighting. While multi-view images have been widely used for object-level inverse rendering, scene-level inverse rendering has primarily been studied using single-view images due to the lack of a dataset containing high dynamic range multi-view images with ground-truth geometry, material, and spatially-varying lighting. To improve the quality of scene-level inverse rendering, a novel framework called Multi-view Attention Inverse Rendering (MAIR) was recently introduced. MAIR performs scene-level multi-view inverse rendering by expanding the OpenRooms dataset, designing efficient pipelines to handle multi-view images, and splitting spatially-varying lighting. Although MAIR showed impressive results, its lighting representation is fixed to spherical Gaussians, which limits its ability to render images realistically. Consequently, MAIR cannot be directly used in applications such as material editing. Moreover, its multi-view aggregation networks have difficulties extracting rich features because they only focus on the mean and variance between multi-view features. In this paper, we propose its extended version, called MAIR++. MAIR++ addresses the aforementioned limitations by introducing an implicit lighting representation that accurately captures the lighting conditions of an image while facilitating realistic rendering. Furthermore, we design a directional attention-based multi-view aggregation network to infer more intricate relationships between views. Experimental results show that MAIR++ not only outperforms MAIR and single-view-based methods but also demonstrates robust performance on unseen real-world scenes.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Pipeline
+                </h3>
+                <img src="./index_files/entire.png" class="img-responsive" alt="overview"><br>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Material Editing
+                </h3>
+                <div class="text-center">
+                    <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                        <source src="index_files/mat_edit_video_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                This work was partly supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government(MSIT)(No.2020-0-00457, 50%) and KIST Institutional Program(Project No.2E32301, 50%). <br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://vilab-ucsd.github.io/ucsd-openrooms/">OpenRooms (Zhengqin Li)</a>.
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
